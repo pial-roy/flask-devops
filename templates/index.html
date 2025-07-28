@@ -4,6 +4,109 @@
   <meta charset="UTF-8">
   <title>Pial Roy | DevOps Engineer</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #e9f0fa;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      color: #1a1a1a;
+    }
+
+    .title {
+      font-size: 1.2em;
+      color: #4b7bec;
+      margin-top: 8px;
+    }
+
+    .subtitle {
+      color: #666;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #4b7bec;
+      font-weight: bold;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #2d3436;
+      border-bottom: 2px solid #dfe6e9;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #999;
+    }
+
+    .docker-hint {
+      color: #4b7bec;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #4b7bec;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #3a66d3;
+    }
+
+    #sysinfo {
+      font-family: monospace;
+      margin-top: 10px;
+      border-radius: 5px;
+      background: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -46,9 +149,24 @@
       <p>B.Tech in Computer Science, MAKAUT (2022)</p>
     </section>
 
+    <hr>
+    <h2>Running on Docker?</h2>
+    <button onclick="getSysInfo()">Click to See Server Info</button>
+    <pre id="sysinfo"></pre>
+
     <footer>
       <p>Made with 💻 by Pial Roy | <span class="docker-hint">Smooth as a container ship.</span></p>
     </footer>
   </div>
+
+  <script>
+    function getSysInfo() {
+      fetch('/sysinfo')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('sysinfo').textContent = JSON.stringify(data, null, 2);
+        });
+    }
+  </script>
 </body>
 </html>

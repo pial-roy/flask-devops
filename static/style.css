@@ -1,31 +1,41 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
+  background: #f0f2f5;
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
 .container {
-  max-width: 800px;
-  margin: auto;
+  max-width: 720px;
+  margin: 30px auto;
   background: #fff;
-  padding: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-top: 30px;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 header {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 h1 {
   margin: 0;
-  color: #222;
+  font-size: 2.2rem;
+  color: #2c3e50;
 }
 
 .subtitle {
-  color: #007bff;
+  color: #3498db;
   font-style: italic;
+  font-size: 1rem;
 }
 
 nav {
@@ -34,73 +44,94 @@ nav {
 }
 
 nav a {
-  margin: 0 15px;
+  margin: 0 10px;
   text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
+  color: #3498db;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-section {
-  margin-top: 30px;
+nav a:hover {
+  color: #1d6fa5;
 }
 
 section h2 {
-  color: #333;
-  border-left: 5px solid #007bff;
+  font-size: 1.4rem;
+  color: #2c3e50;
+  border-left: 4px solid #3498db;
   padding-left: 10px;
+  margin-top: 30px;
 }
 
 ul {
   padding-left: 20px;
+  margin: 10px 0;
 }
 
 footer {
   text-align: center;
   margin-top: 50px;
-  color: #888;
-  font-size: 0.9em;
-}
-
-.docker-hint {
-  color: #008cba;
-  font-style: italic;
+  color: #aaa;
+  font-size: 0.85rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 form label {
   margin: 10px 0 5px;
+  font-weight: 500;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 form button {
   margin-top: 15px;
   padding: 10px;
-  background: #007bff;
+  background: #3498db;
   color: white;
+  font-size: 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #2980b9;
 }
 
 .flash {
-  background-color: #d4edda;
-  color: #155724;
-  padding: 10px;
-  margin-top: 20px;
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 12px;
   border-left: 5px solid #28a745;
+  margin-top: 20px;
+  border-radius: 6px;
 }
 
 .email-hint {
   margin-top: 20px;
   font-size: 0.9em;
-  color: #555;
+  color: #777;
+}
+
+#uptime {
+  font-family: monospace;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  background: #ecf0f1;
+  padding: 8px 14px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 10px;
 }
