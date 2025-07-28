@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Pial Roy</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
 </head>
 <body>
+  <div class="solar-system">
+    <div class="sun"></div>
+    <div class="planet mercury"></div>
+    <div class="planet venus"></div>
+    <div class="planet earth"></div>
+    <div class="planet mars"></div>
+    <div class="planet jupiter"></div>
+    <div class="planet saturn">
+      <div class="ring"></div>
+    </div>
+    <div class="planet uranus"></div>
+    <div class="planet neptune"></div>
+  </div>
+
   <div class="container">
     <header>
       <h1>Contact Me</h1>
@@ -14,7 +28,7 @@
 
     <nav>
       <a href="/">Home</a>
-      <a href="/contact">Contact Me</a>
+      <a href="/contact">Contact</a>
     </nav>
 
     {% with messages = get_flashed_messages() %}
