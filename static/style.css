@@ -1,3 +1,9 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #0d1117;
+  color: #eee;
+}
 
 #solar-bg {
   position: fixed;
@@ -6,152 +12,114 @@
   z-index: 0;
   width: 100vw;
   height: 100vh;
-  background: #0d1117; /* dark theme */
+  background: #0d1117;
 }
 
 .container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
   position: relative;
   z-index: 1;
-  backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.8); /* semi-transparent */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f0f2f5;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-.container {
-  max-width: 720px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 0.6s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 header {
   text-align: center;
-  margin-bottom: 20px;
+  padding: 40px 20px;
+  background: rgba(233, 240, 250, 0.1);
+  border-radius: 10px;
 }
 
-h1 {
+header h1 {
   margin: 0;
-  font-size: 2.2rem;
-  color: #2c3e50;
+  font-size: 2.8em;
+  color: #ffffff;
+}
+
+.title {
+  font-size: 1.2em;
+  color: #4b7bec;
+  margin-top: 8px;
 }
 
 .subtitle {
-  color: #3498db;
+  color: #aaa;
   font-style: italic;
-  font-size: 1rem;
+  margin-top: 5px;
 }
 
 nav {
-  margin: 20px 0;
   text-align: center;
+  margin: 20px 0;
 }
 
 nav a {
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
-  color: #3498db;
+  color: #4b7bec;
+  font-weight: bold;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #e6f2ff;
   font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #1d6fa5;
-}
-
-section h2 {
-  font-size: 1.4rem;
-  color: #2c3e50;
-  border-left: 4px solid #3498db;
-  padding-left: 10px;
-  margin-top: 30px;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #4b7bec;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
 }
 
 ul {
   padding-left: 20px;
-  margin: 10px 0;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: #111;
+  color: #0f0;
+  padding: 10px;
+  border-radius: 6px;
 }
 
 footer {
   text-align: center;
-  margin-top: 50px;
-  color: #aaa;
-  font-size: 0.85rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-form label {
-  margin: 10px 0 5px;
-  font-weight: 500;
-}
-
-form input,
-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-form button {
-  margin-top: 15px;
-  padding: 10px;
-  background: #3498db;
-  color: white;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-form button:hover {
-  background: #2980b9;
-}
-
-.flash {
-  background-color: #dff0d8;
-  color: #3c763d;
-  padding: 12px;
-  border-left: 5px solid #28a745;
-  margin-top: 20px;
-  border-radius: 6px;
-}
-
-.email-hint {
-  margin-top: 20px;
+  margin-top: 40px;
   font-size: 0.9em;
-  color: #777;
+  color: #888;
 }
 
-#uptime {
+.docker-hint {
+  color: #4b7bec;
+}
+
+button {
+  padding: 10px 20px;
+  background: #4b7bec;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3a66d3;
+}
+
+#sysinfo {
   font-family: monospace;
-  font-size: 1.2rem;
-  color: #2c3e50;
-  background: #ecf0f1;
-  padding: 8px 14px;
-  border-radius: 6px;
-  display: inline-block;
   margin-top: 10px;
+  border-radius: 5px;
+  background: #111;
+  color: #0f0;
+  padding: 10px;
 }
