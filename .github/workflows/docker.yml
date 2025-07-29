@@ -28,3 +28,5 @@ jobs:
         context: .
         push: true
         tags: pialroy5/flask-devops:latest
+        build-args: |
+          TOKEN_GITHUB=${{ secrets.TOKEN_GITHUB }}
