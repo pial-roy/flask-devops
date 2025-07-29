@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Pial Roy | DevOps Engineer</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- ✨ Solar system canvas background -->
@@ -14,6 +15,17 @@
       <h1>Pial Roy</h1>
       <p class="title">DevOps Engineer</p>
       <p class="subtitle">Containerized for smooth delivery 🚀</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/pialroy" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/pial-roy" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:pialroy31416@gmail.com" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
     </header>
 
     <nav>
@@ -21,41 +33,100 @@
       <a href="/contact">Contact Me</a>
     </nav>
 
-    <section class="summary">
-      <h2>Professional Summary</h2>
+    <section class="intro">
+      <h2>Hello there 👋</h2>
       <p>
-        I am a DevOps Engineer with over 3 years of experience in CI/CD pipeline design,
-        automation, and infrastructure monitoring. Proficient in Docker, AWS, Jenkins, Python scripting.
+        I'm Pial, a DevOps enthusiast who believes in letting the machines do the boring stuff—
+        so developers can focus on creativity. My journey started with a curiosity to solve problems,
+        automate repetitive tasks, and build systems that scale reliably.
+      </p>
+      <p>
+        Think of me as the guy behind the curtain making sure your app deploys like a charm every time.
+        From infrastructure as code to monitoring production — I bridge the gap between development and operations.
+      </p>
+    </section>
+
+    <section class="devops-story">
+      <h2>My DevOps Story 📘</h2>
+      <p>
+        Over the past few years, I’ve worked extensively with tools like Jenkins, Docker, GitHub Actions,
+        and Terraform to design CI/CD pipelines that are fast, reliable, and secure. At Persistent Systems,
+        I helped reduce build times by 40%, containerized legacy services, and introduced automated testing flows.
+      </p>
+      <p>
+        I enjoy working in cloud-native environments—AWS, Linux servers, Kubernetes clusters.
+        Automation is at the heart of everything I build—whether it's a bash script, a Python bot, or
+        an Ansible playbook.
+      </p>
+    </section>
+
+    <section class="automation">
+      <h2>Automation & Testing 🧪</h2>
+      <p>
+        I believe quality and speed can coexist. I’ve automated countless tests using Selenium and Python
+        for web UIs, and Jenkins for running scheduled sanity checks. I’ve also built alerting systems to catch
+        issues before users do. When you automate feedback loops, teams ship faster with confidence.
+      </p>
+    </section>
+    
+    <section class="ai-architect">
+      <h2>🧠 Architecting Systems & Conversations</h2>
+      <p>
+        As an engineer, I don’t just build pipelines—I architect solutions. I enjoy designing scalable systems
+        where every component knows its role and no packet gets left behind. From microservice architectures
+        to resilient deployment strategies, I ensure performance, security, and clarity are baked into every layer.
+      </p>
+      <p>
+        Beyond code, I’ve also stepped into the evolving world of AI. As a skilled prompt engineer,
+        I work with language models to generate workflows, docs, automations, and even UI components—
+        turning vague ideas into tangible, working pieces. It's not just about knowing the tools, but knowing how to ask.
+      </p>
+      <p>
+        Whether I'm writing a Jenkinsfile or crafting a prompt to generate infrastructure-as-code,
+        I think like an architect: balance trade-offs, simplify complexity, and always optimize for clarity.
       </p>
     </section>
 
     <section class="skills">
-      <h2>Skills</h2>
-      <p>AWS, Docker, Jenkins, Bash, Terraform, Ansible, Kubernetes, Python, CI/CD, Monitoring, SQL, Linux</p>
+      <h2>🛠️ Tools & Tech I Love</h2>
+      <ul>
+        <li><strong>DevOps & CI/CD:</strong> Jenkins, GitHub Actions, GitLab CI, Docker</li>
+        <li><strong>Infrastructure:</strong> AWS (EC2, S3, Lambda), Terraform, Ansible</li>
+        <li><strong>Monitoring:</strong> Prometheus, Grafana, ELK stack</li>
+        <li><strong>Automation:</strong> Bash, Python, Selenium, cron jobs</li>
+        <li><strong>Databases:</strong> PostgreSQL, MySQL, SQLite</li>
+        <li><strong>Systems:</strong> Ubuntu, RedHat, Alpine</li>
+      </ul>
     </section>
 
     <section class="experience">
-      <h2>Experience</h2>
-      <h3>Persistent Systems (DevOps Engineer)</h3>
+      <h2>👨‍💻 Experience</h2>
+      <h3>Persistent Systems – DevOps Engineer</h3>
       <ul>
-        <li>Built Jenkins CI/CD pipelines, reduced build times by 40%</li>
-        <li>Created Docker images for microservices</li>
-        <li>Automated deployments with Bash, Python, cron</li>
+        <li>Designed Jenkins pipelines with test, build, and deployment stages</li>
+        <li>Created and optimized Docker images for multiple microservices</li>
+        <li>Automated routine maintenance scripts in Bash and Python</li>
+        <li>Managed AWS infrastructure for staging and production environments</li>
+        <li>Implemented alerting and monitoring dashboards for 24/7 uptime</li>
       </ul>
     </section>
 
     <section class="education">
-      <h2>Education</h2>
-      <p>B.Tech in Computer Science, MAKAUT (2022)</p>
+      <h2>🎓 Education</h2>
+      <p>B.Tech in Applied Electronics And Instrumentation – MAKAUT, 2022</p>
     </section>
 
-    <hr>
-    <h2>Running on Docker?</h2>
-    <button onclick="getSysInfo()">Click to See Server Info</button>
-    <pre id="sysinfo"></pre>
+    <section class="terminal-fun">
+      <h2>🧠 Curious what's under the hood?</h2>
+      <button onclick="getSysInfo()">Click to See Docker Container Info</button>
+      <pre id="sysinfo">[ waiting for input... ]</pre>
+    </section>
 
     <footer>
-      <p>Made with 💻 by Pial Roy | <span class="docker-hint">Smooth as a container ship.</span></p>
+      <p>
+        🚢 Made with containers & caffeine by <strong>Pial Roy</strong><br>
+        <em>“Good DevOps is invisible — bad DevOps is unforgettable.”</em>
+      </p>
     </footer>
   </div>
 
@@ -69,7 +140,6 @@
     }
   </script>
 
-  <!-- 🪐 Solar system animation -->
   <script src="{{ url_for('static', filename='solar.js') }}"></script>
 </body>
 </html>
