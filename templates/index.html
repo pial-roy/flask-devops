@@ -98,9 +98,34 @@
       <li>Fully containerized using Docker, deployed via GitHub Actions</li>
       <li>Live container uptime and host info available <a href="/cicd" target="_blank">here</a></li>
     </ul>
+    <a href="https://github.com/pial-roy/flask-devops" target="_blank">
+      <img src="{{ url_for('static', filename='images/cicd_dashboard.png') }}" alt="CI/CD Workflow Image" width="100%">
+    </a>
     <p>
       🔗 <a href="https://github.com/pial-roy/flask-devops" target="_blank">
       View Source Code on GitHub</a>
+    </p>
+  </div>
+
+  <div class="project">
+    <h3>📈 Prometheus Monitoring for Flask App</h3>
+    <p>
+      Integrated Prometheus into this Flask-based portfolio to collect and expose real-time
+      system metrics including CPU, memory, and Python garbage collection stats.
+    </p>
+    <ul>
+      <li>Metrics exposed via `/metrics` endpoint</li>
+      <li>Prometheus scrapes & stores data as time-series</li>
+      <li>Deployed in a Dockerized environment on Northflank</li>
+      <li>Live dashboard for monitoring resource usage and application behavior</li>
+    </ul>
+    <a href="https://pial-roy--prometheus--42qn9fvh4xdp.code.run/graph?g0.expr=flask_cpu_usage_percent&g0.tab=0&g0.display_mode=stacked&g0.show_exemplars=1&g0.range_input=15m&g1.expr=flask_memory_usage_percent&g1.tab=0&g1.display_mode=lines&g1.show_exemplars=0&g1.range_input=15m&g2.expr=python_gc_objects_collected_total&g2.tab=1&g2.display_mode=lines&g2.show_exemplars=0&g2.range_input=1h"
+       target="_blank">
+      <img src="{{ url_for('static', filename='images/prometheus.png') }}" alt="Prometheus Monitoring Dashboard" width="100%">
+    </a>
+    <p>
+      🔗 <a href="https://pial-roy--prometheus--42qn9fvh4xdp.code.run/graph?g0.expr=flask_cpu_usage_percent&g0.tab=0&g0.display_mode=stacked&g0.show_exemplars=1&g0.range_input=15m&g1.expr=flask_memory_usage_percent&g1.tab=0&g1.display_mode=lines&g1.show_exemplars=0&g1.range_input=15m&g2.expr=python_gc_objects_collected_total&g2.tab=1&g2.display_mode=lines&g2.show_exemplars=0&g2.range_input=1h" target="_blank">
+      View Prometheus Dashboard</a>
     </p>
   </div>
 </section>
