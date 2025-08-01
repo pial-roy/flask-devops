@@ -5,3 +5,7 @@ requests
 prometheus_flask_exporter
 prometheus_client
 psutil
+
+pdfkit
+python-docx
+beautifulsoup4

@@ -1,3 +1,8 @@
+from flask import render_template, make_response, send_file
+import pdfkit
+from docx import Document
+from bs4 import BeautifulSoup
+
 from flask import Flask, jsonify
 from main.routes import main
 from contact.routes import contact
@@ -73,6 +78,47 @@ def sysinfo():
         "cpu_percent": cpu_percent
     }
     return jsonify(info)
+    
+  
+from flask import render_template, make_response
+import pdfkit
+from docx import Document
+from bs4 import BeautifulSoup
+
+@app.route("/cv/pdf")
+def generate_pdf():
+    rendered = render_template("cv_template.html")
+    # PDFKit config (you can set config= if wkhtmltopdf is not in PATH)
+    pdf = pdfkit.from_string(rendered, False)
+    response = make_response(pdf)
+    response.headers["Content-Type"] = "application/pdf"
+    response.headers["Content-Disposition"] = "attachment; filename=cv_pialroy.pdf"
+    return response
+
+@app.route("/cv/docx")
+def generate_docx():
+    rendered = render_template("cv_template.html")
+    soup = BeautifulSoup(rendered, "html.parser")
+    
+    doc = Document()
+    for elem in soup.find_all(['h1', 'h2', 'h3', 'h4', 'p', 'li']):
+        text = elem.get_text(strip=True)
+        if elem.name.startswith('h'):
+            doc.add_heading(text, level=int(elem.name[-1]))
+        elif elem.name == 'p':
+            doc.add_paragraph(text)
+        elif elem.name == 'li':
+            doc.add_paragraph(f'• {text}', style='List Bullet')
+
+    response = make_response()
+    doc.save("cv_pialroy.docx")
+    with open("cv_pialroy.docx", "rb") as f:
+        response.data = f.read()
+
+    response.headers["Content-Type"] = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    response.headers["Content-Disposition"] = "attachment; filename=cv_pialroy.docx"
+    return response  
+  
 
 # Run App
 if __name__ == "__main__":
