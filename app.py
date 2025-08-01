@@ -85,7 +85,7 @@ import pdfkit
 from docx import Document
 from bs4 import BeautifulSoup
 
-@app.route("/cv/pdf")
+@app.route("/download/pdf")
 def generate_pdf():
     rendered = render_template("cv_template.html")
     # PDFKit config (you can set config= if wkhtmltopdf is not in PATH)
@@ -95,7 +95,7 @@ def generate_pdf():
     response.headers["Content-Disposition"] = "attachment; filename=cv_pialroy.pdf"
     return response
 
-@app.route("/cv/docx")
+@app.route("/download/docx")
 def generate_docx():
     rendered = render_template("cv_template.html")
     soup = BeautifulSoup(rendered, "html.parser")

@@ -13,6 +13,16 @@ WORKDIR /app
 # Copy files
 COPY . .
 
+
+RUN apt-get update && apt-get install -y \
+    wkhtmltopdf \
+    libxrender1 \
+    libxext6 \
+    libfontconfig1 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
