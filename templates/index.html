@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <title>Pial Roy | DevOps Engineer</title>  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+</head>  
+<body class="bg-light">  
+  <div class="container py-5">  
+
+    <header class="text-center mb-5">  
+      <h1 class="display-4 fw-bold">Pial Roy</h1>  
+      <p class="fs-4 text-muted">DevOps Engineer</p>  
+      <div class="d-flex justify-content-center gap-3 mt-3">  
+        <a href="https://www.linkedin.com/in/pialroy" target="_blank" class="text-decoration-none text-dark">LinkedIn</a>  
+        <a href="https://github.com/pial-roy" target="_blank" class="text-decoration-none text-dark">GitHub</a>  
+        <a href="mailto:pialroy31416@gmail.com" class="text-decoration-none text-dark">Email</a>  
+      </div>  
+    </header>
+
+    <section class="mb-5">  
+      <h2 class="h4">About Me</h2>  
+      <p>
+        I'm a DevOps engineer who thrives on building smooth, automated deployment pipelines and solving infrastructure problems with code. I enjoy working with cloud-native tools, building observability into systems, and reducing manual effort through smart automation.
+      </p>  
+    </section>
+
+    <section class="mb-5">  
+      <h2 class="h4">Professional Summary</h2>  
+      <p>
+        With 3+ years at Persistent Systems, I’ve delivered scalable DevOps solutions across enterprise-grade applications. I specialize in Jenkins-based CI/CD, Dockerized deployments, cloud services on AWS, and scripting with Python and Bash. My focus is always on system reliability, fast iteration, and secure, reproducible deployments.
+      </p>
+    </section>
+
+    <section class="mb-5">  
+      <h2 class="h4">Projects</h2>
+
+      <div class="card shadow-sm mb-4">  
+        <div class="card-body">  
+          <h5 class="card-title">Client Project: IQVIA - StudyOptimizer (2022–Present)</h5>  
+          <p class="card-text">
+            At Persistent Systems, I worked on IQVIA’s enterprise app <strong>StudyOptimizer</strong>, streamlining DevOps workflows for a mission-critical platform in clinical research.
+          </p>  
+          <ul>
+            <li>Built robust Jenkins pipelines, reducing build/deploy time by 60%</li>
+            <li>Created secure Docker images for application delivery</li>
+            <li>Automated large-scale data load processes</li>
+            <li>Implemented post-deployment reporting via Python and cx_Oracle</li>
+          </ul>  
+          <p class="text-muted small">Note: Application details are anonymized for confidentiality.</p>
+        </div>  
+      </div>
+
+      <div class="card shadow-sm mb-4">  
+        <div class="card-body">  
+          <h5 class="card-title">CI/CD Visualization Dashboard</h5>  
+          <p class="card-text">
+            A Flask dashboard to visualize GitHub Actions CI/CD workflow history. Built with SQLite, SQLAlchemy, and deployed via Docker.
+          </p>  
+          <ul>
+            <li>Live build and job status monitoring</li>  
+            <li>Containerized Flask app with SQLAlchemy</li>  
+            <li><a href="/cicd" target="_blank">Live uptime and host info</a></li>  
+          </ul>  
+          <a href="https://github.com/pial-roy/flask-devops" target="_blank" class="btn btn-outline-dark btn-sm">GitHub Repo</a>  
+        </div>  
+      </div>
+
+      <div class="card shadow-sm mb-4">  
+  <div class="card-body">  
+    <h5 class="card-title">Prometheus Monitoring Setup</h5>  
+    <p class="card-text">
+      Built a lightweight monitoring solution for a Flask application using Prometheus. The app exposes custom metrics via a <code>/metrics</code> endpoint, collected and visualized directly through Prometheus' built-in dashboard.
+    </p>  
+    <ul>  
+      <li>Custom metrics exporter integrated into Flask</li>  
+      <li>Real-time data scraping using Prometheus</li>  
+      <li>Deployed using Docker on Northflank</li>  
+    </ul>  
+    <a href="https://pial-roy--prometheus--42qn9fvh4xdp.code.run/graph" target="_blank" class="btn btn-outline-dark btn-sm">Open Prometheus Dashboard</a>  
+  </div>  
+</div>
+    
+    </section>
+
+    <section class="mb-5">  
+      <h2 class="h4">DevOps Skills</h2>  
+      <ul class="row row-cols-2 row-cols-md-3 g-3">
+        <li>Linux Server Ops (systemd, cron, SSH)</li>
+        <li>Bash Scripting & Python Automation</li>
+        <li>CI/CD Pipelines (Jenkins, GitHub Actions)</li>
+        <li>Git, GitHub CLI, Version Control</li>
+        <li>Docker & Kubernetes</li>
+        <li>AWS (EC2, S3, IAM)</li>
+        <li>Infrastructure as Code (Terraform, Ansible)</li>
+        <li>Monitoring & Observability (Prometheus, Grafana, Datadog)</li>
+        <li>SQL, cx_Oracle, Data Processing</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">  
+      <h2 class="h4">Certifications</h2>
+      <ul>
+        <li><strong>Linux Command Line Basics</strong> – 2024 – <a href="https://www.udemy.com/certificate/UC-5d9e7c11-d5ed-47c6-bd73-005e9a3b9f5e/" target="_blank">View Certificate</a></li>
+        <li><strong>Microsoft Certified: Azure Fundamentals</strong> – 2022 – <a href="https://www.credly.com/badges/af843122-187f-4eb5-89d1-cf720fe9c088?source=linked_in_profile" target="_blank">View Badge</a></li>
+        <li><strong>Databricks Lakehouse Fundamentals</strong> – 2023 – <a href="https://credentials.databricks.com/a70c698e-5ef0-4092-864e-3b494ca58ee1" target="_blank">View Credential</a></li>
+      </ul>
+    </section>
+
+    <section class="mb-5">  
+      <h2 class="h4">Education</h2>  
+      <p>
+        B.Tech in Applied Electronics & Instrumentation – MAKAUT, 2022.
+      </p>  
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h4">System Info</h2>
+      <p>
+        This portfolio is powered by <strong>Flask</strong>, built with <strong>Docker</strong>, and deployed using <strong>CI/CD pipelines</strong> — just like the production systems I manage. You can fetch real-time system info from the container below:
+      </p>
+      <button onclick="getSysInfo()" class="btn btn-outline-primary mt-2">Click here to view live system info</button>
+      <pre id="sysinfo" class="bg-dark text-white p-3 mt-3 rounded">[ waiting for input... ]</pre>
+    </section>
+
+    
+    <section class="mb-5">
+  <h2 class="h4">Download CV</h2>
+  <p>You can download a copy of this portfolio as a PDF or DOCX resume.</p>
+  <div class="d-flex justify-content-center gap-3 mt-3">
+    <a href="/download/pdf" class="btn btn-outline-danger btn-sm">Download PDF</a>
+    <a href="/download/docx" class="btn btn-outline-primary btn-sm">Download DOCX</a>
+  </div>
+</section>
+
+
+
+    <footer class="text-center mt-5">  
+      <p class="text-muted small">&copy; Pial Roy | DevOps Engineer</p>  
+    </footer>
+
+  </div>
+
+  <script>  
+    function getSysInfo() {  
+      fetch('/sysinfo')  
+        .then(res => res.json())  
+        .then(data => {  
+          document.getElementById('sysinfo').textContent = JSON.stringify(data, null, 2);  
+        });  
+    }  
+  </script>
+
+</body>  
+</html>

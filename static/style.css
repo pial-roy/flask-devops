@@ -1,0 +1,126 @@
+/* style.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: linear-gradient(to right, #ffffff, #f1f3f5);
+  border-bottom: 1px solid #dee2e6;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+header .title {
+  font-size: 1.3rem;
+  color: #6c757d;
+}
+
+header .subtitle {
+  font-size: 1rem;
+  color: #868e96;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
+  color: #495057;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0d6efd;
+}
+
+section {
+  margin-top: 3rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.project img {
+  margin: 1rem 0;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f1f3f5;
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+button {
+  background-color: #0d6efd;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0b5ed7;
+}
+
+pre#sysinfo {
+  background: #f8f9fa;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #212529;
+  overflow-x: auto;
+}
+
+/* Optional - responsive tweaks */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
+}

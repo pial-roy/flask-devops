@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.env
+*.log
+
+# Flask
+instance/
+.env
+*.db
+
+# Docker
+*.tar
+*.pid
+Dockerfile~
+
+# VSCode
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db
+
+# GitHub token or credentials
+.env
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Pipenv
+Pipfile.lock
+
+# Pytest
+.cache/
+
+# Docker Compose override
+docker-compose.override.yml
+.env

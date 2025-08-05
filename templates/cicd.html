@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CI/CD Dashboard</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .workflow { border: 1px solid #ddd; margin: 10px 0; padding: 10px; border-radius: 6px; }
+        .success { color: green; }
+        .failure { color: red; }
+    </style>
+</head>
+<body>
+    <h1>GitHub CI/CD Workflow Runs</h1>
+    <div id="workflows">Loading...</div>
+
+    <script>
+        fetch("/api/workflows")
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById("workflows");
+            container.innerHTML = "";
+            if (data.workflow_runs) {
+                data.workflow_runs.forEach(run => {
+                    const div = document.createElement("div");
+                    div.className = "workflow";
+                    div.innerHTML = `
+                        <strong>${run.name}</strong> —
+                        <span class="${run.conclusion}">${run.conclusion}</span><br/>
+                        <small>Commit: ${run.head_commit?.message || 'N/A'}</small><br/>
+                        <small>Started: ${new Date(run.created_at).toLocaleString()}</small><br/>
+                        <a href="${run.html_url}" target="_blank">View on GitHub</a>
+                    `;
+                    container.appendChild(div);
+                });
+            } else {
+                container.innerHTML = "No workflow data found.";
+            }
+        })
+        .catch(err => {
+            document.getElementById("workflows").innerHTML = "Failed to fetch workflow data.";
+            console.error(err);
+        });
+    </script>
+</body>
+</html>
