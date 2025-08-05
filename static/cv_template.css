@@ -1,0 +1,29 @@
+/* Font and spacing */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+/* Page-breaking rules for PDF layout */
+h2, h5, h6 {
+  page-break-before: always;
+}
+
+p, ul, li, section {
+  page-break-inside: avoid;
+}
+
+/* Prevent breaking before the very first heading */
+h2:first-of-type,
+h5:first-of-type,
+h6:first-of-type {
+  page-break-before: auto;
+}
