@@ -33,69 +33,111 @@
   <section class="mb-4">
     <h2 class="h5">Professional Summary</h2>
     <p>
-      DevOps Engineer with over 3 years of experience at Persistent Systems. Skilled in CI/CD automation, containerization, infrastructure as code, and cloud-native practices using tools like Jenkins, Docker, Kubernetes, and AWS.
+      I’m a DevOps Engineer with over 3 years of hands-on experience, currently working at <strong>Persistent Systems</strong>. My journey in DevOps has been all about solving real engineering problems—not just implementing tools, but making systems faster, safer, and easier to deploy.
+    </p>
+    <p>
+      My core strengths lie in designing <strong>CI/CD</strong> pipelines, automating deployments, managing containerized workloads, and integrating monitoring solutions. I’ve worked with <strong>AWS</strong>, <strong>Jenkins</strong>, <strong>Docker</strong>, <strong>Kubernetes</strong>, and monitoring stacks like <strong>Prometheus</strong> and <strong>Datadog</strong>.
+    </p>
+    <p>
+      I’m passionate about building automation that saves time, catches errors early, and helps teams move faster without breaking things. I enjoy wearing multiple hats—from writing shell scripts to debugging production issues to documenting onboarding processes.
     </p>
   </section>
 
   <section class="mb-4">
-    <h2 class="h5">Projects</h2>
+    <h2 class="h5">Key Projects</h2>
 
-    <h6>Client Project: IQVIA - StudyOptimizer (2022–Present)</h6>
+    <h6><strong>IQVIA – StudyOptimizer Platform (Persistent Systems) | 2022 – Present</strong></h6>
+    <p>
+      I joined the IQVIA team at a time when builds were flaky and deployments were mostly manual. I redesigned their <strong>Jenkins</strong> pipeline architecture, cutting build times from 18 to just 6 minutes. I also introduced <strong>Docker</strong>-based containerization, which helped in making the releases faster and more consistent across dev and UAT environments.
+    </p>
+    <p>
+      One of my most challenging (and satisfying) contributions was building an observability system from scratch using <strong>Datadog</strong>. I developed and deployed synthetic tests, browser checks, and custom <strong>APM</strong> monitors to track app health proactively. This not only reduced on-call issues but improved team confidence in releases.
+    </p>
+    <p>
+      Additionally, I automated complex data ingestion workflows using <strong>Python</strong>, <strong>Oracle</strong> (via <code><strong>cx_Oracle</strong></code>), and <strong>batch</strong> scripts—processes that previously required manual steps and often failed silently. I also maintained multiple infrastructure components on <strong>AWS</strong> (<strong>EC2</strong>, <strong>S3</strong>, <strong>IAM</strong>), including setting up roles and secure credential handling for build jobs.
+    </p>
     <ul>
-      <li>Built optimized Jenkins pipelines reducing build/deploy time by 60%</li>
-      <li>Created secure Docker images to streamline releases</li>
-      <li>Automated validation reports using Python + cx_Oracle</li>
-      <li>Managed large-scale data load automation processes</li>
+      <li><strong>Jenkins</strong> pipelines (declarative + shared libraries)</li>
+      <li><strong>Datadog</strong> integration: <strong>APM</strong>, synthetic monitoring, alerting</li>
+      <li><strong>Dockerized</strong> legacy apps to simplify environment parity</li>
+      <li>Scripted automated regression reports using <strong>Python</strong></li>
+      <li>Maintained <strong>AWS</strong> infra, roles, secrets, and build artifacts</li>
     </ul>
 
-    <h6>CI/CD Visualization Dashboard</h6>
+    <h6><strong>CI/CD Visualization Dashboard (<strong>Flask</strong> + <strong>GitHub API</strong>)</strong></h6>
+    <p>
+      I built a developer dashboard in <strong>Flask</strong> to visualize <strong>GitHub</strong> workflow health in real time. It retrieves workflow run data via <strong>GitHub API</strong> and displays key metrics like success rate, job duration, and frequency.
+    </p>
     <ul>
-      <li>Flask dashboard visualizing GitHub workflow data with SQLite</li>
-      <li>Built with SQLAlchemy and containerized</li>
-      <li><a href="https://pial-roy--devops--42qn9fvh4xdp.code.run/cicd" target="_blank">View CI/CD Dashboard</a></li>
-      <li><a href="https://github.com/pial-roy/flask-devops" target="_blank">GitHub Repo</a></li>
+      <li>Built with <strong>Flask</strong>, <strong>SQLAlchemy</strong>, and <strong>Bootstrap</strong></li>
+      <li>Stored metadata locally in <strong>SQLite</strong></li>
+      <li>Containerized with <strong>Docker</strong> and deployed on <strong>Northflank</strong></li>
+      <li>
+        <a href="https://pial-roy--devops--42qn9fvh4xdp.code.run/cicd" target="_blank">Live Demo</a> |
+        <a href="https://github.com/pial-roy/flask-devops" target="_blank">GitHub Repo</a>
+      </li>
     </ul>
 
-    <h6>Prometheus Monitoring Integration</h6>
+    <h6><strong>Prometheus Monitoring Stack (Custom App Metrics)</strong></h6>
+    <p>
+      Monitoring shouldn’t be an afterthought. So I built a full-stack observability setup for my own apps using <strong>Prometheus</strong> and <strong>Grafana</strong>. I exposed <code>/metrics</code> endpoints via <code><strong>prometheus_client</strong></code> and tracked runtime metrics like CPU usage, memory consumption, and request durations.
+    </p>
     <ul>
-      <li>Custom `/metrics` endpoint in Flask exposing runtime data</li>
-      <li>Prometheus integration deployed with Docker</li>
-      <li><a href="https://pial-roy--prometheus--42qn9fvh4xdp.code.run/graph?g0.expr=flask_cpu_usage_percent&g0.tab=0&g0.display_mode=stacked&g0.show_exemplars=1&g0.range_input=15m&g1.expr=flask_memory_usage_percent&g1.tab=0&g1.display_mode=lines&g1.show_exemplars=0&g1.range_input=15m&g2.expr=python_gc_objects_collected_total&g2.tab=1&g2.display_mode=lines&g2.show_exemplars=0&g2.range_input=1h" target="_blank">Prometheus Dashboard</a></li>
+      <li>Integrated <strong>Prometheus</strong> with <strong>Flask</strong> APIs</li>
+      <li>Tracked GC stats, request times, and resource usage</li>
+      <li>Deployed with <strong>Docker Compose</strong></li>
+      <li>
+        <a href="https://pial-roy--prometheus--42qn9fvh4xdp.code.run/graph" target="_blank">View Metrics</a>
+      </li>
+    </ul>
+
+    <h6><strong>Personal DevOps Lab</strong></h6>
+    <p>
+      Outside of work, I maintain a personal DevOps lab to explore and break things safely. It includes a self-hosted setup with <strong>Jenkins</strong>, <strong>GitLab</strong>, <strong>Minikube</strong>, and observability tools. I’ve experimented with <strong>AWS</strong> Free Tier services to deploy test workloads and understand real-world infra concerns like <strong>IAM</strong> policies, cost control, and <strong>DNS</strong> routing.
+    </p>
+  </section>
+
+  <section class="mb-4">
+    <h2 class="h5">Key Achievements</h2>
+    <ul>
+      <li>Reduced deployment effort by over 90% via pipeline automation</li>
+      <li>Improved build success rate from 65% to 98% through pipeline hardening</li>
+      <li>Created onboarding documentation and live demos for DevOps interns</li>
+      <li>Introduced monitoring-first culture in client project via <strong>Datadog</strong></li>
     </ul>
   </section>
 
   <section class="mb-4">
     <h2 class="h5">DevOps Skills</h2>
     <ul class="row row-cols-2">
-      <li>Linux & Bash</li>
-      <li>Python & SQL</li>
-      <li>Git & GitHub CLI</li>
-      <li>Jenkins & GitHub Actions</li>
-      <li>CI/CD Workflows</li>
-      <li>Docker & Kubernetes</li>
-      <li>Terraform & IaC</li>
-      <li>Ansible</li>
-      <li>AWS (EC2, S3, IAM)</li>
-      <li>Prometheus, Grafana, Datadog</li>
-      <li>Systemd, Cron, SSH</li>
-      <li>Linux Server Administration</li>
+      <li>Linux, Bash Scripting</li>
+      <li>Python, SQL, cx_Oracle</li>
+      <li>Git, GitHub CLI, GitLab</li>
+      <li>Jenkins, GitHub Actions, CI/CD</li>
+      <li>Docker, Docker Compose</li>
+      <li>Kubernetes (Minikube, k3s)</li>
+      <li>Terraform, Infrastructure as Code (IaC)</li>
+      <li>Ansible (playbooks, roles)</li>
+      <li>AWS: EC2, S3, IAM, Route 53</li>
+      <li>Monitoring: Prometheus, Grafana, Datadog</li>
+      <li>System Admin: Systemd, SSH, Cron jobs</li>
+      <li>Debugging, Log Analysis, Secret Management</li>
     </ul>
   </section>
 
   <section class="mb-4">
     <h2 class="h5">Certifications</h2>
     <ul>
-      <li><strong>Linux Command Line Basics</strong> – 2024 – <a href="https://www.udemy.com/certificate/UC-5d9e7c11-d5ed-47c6-bd73-005e9a3b9f5e/" target="_blank">View</a></li>
-      <li><strong>Microsoft Certified: Azure Fundamentals</strong> – 2022 – <a href="https://www.credly.com/badges/af843122-187f-4eb5-89d1-cf720fe9c088?source=linked_in_profile" target="_blank">View</a></li>
-      <li><strong>Databricks Lakehouse Fundamentals</strong> – 2023 – <a href="https://credentials.databricks.com/a70c698e-5ef0-4092-864e-3b494ca58ee1" target="_blank">View</a></li>
+      <li><strong>Linux Command Line Basics</strong> – 2024 – <a href="https://www.udemy.com/certificate/UC-5d9e7c11-d5ed-47c6-bd73-005e9a3b9f5e/" target="_blank">View Certificate</a></li>
+      <li><strong>Microsoft Certified: Azure Fundamentals</strong> – 2022 – <a href="https://www.credly.com/badges/af843122-187f-4eb5-89d1-cf720fe9c088?source=linked_in_profile" target="_blank">View Certificate</a></li>
+      <li><strong>Databricks Lakehouse Fundamentals</strong> – 2023 – <a href="https://credentials.databricks.com/a70c698e-5ef0-4092-864e-3b494ca58ee1" target="_blank">View Certificate</a></li>
     </ul>
   </section>
 
   <section class="mb-4">
     <h2 class="h5">Education</h2>
-    <p>B.Tech in Applied Electronics & Instrumentation – MAKAUT (2022)</p>
+    <p><strong>B.Tech in Applied Electronics & Instrumentation</strong><br>
+      Maulana Abul Kalam Azad University of Technology (MAKAUT), 2022</p>
   </section>
-
-
 </body>
 </html>
