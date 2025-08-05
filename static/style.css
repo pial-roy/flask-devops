@@ -124,3 +124,43 @@ pre#sysinfo {
     font-size: 1.4rem;
   }
 }
+
+<!-- Dark Mode CSS -->
+
+  .dark-mode {
+    background-color: #121212;
+    color: #f8f9fa;
+  }
+  .dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+  }
+  .dark-mode .bg-white {
+    background-color: #1e1e1e !important;
+  }
+  .dark-mode .text-muted {
+    color: #cccccc !important;
+  }
+  .dark-mode .navbar-light .navbar-nav .nav-link,
+  .dark-mode .navbar-light .navbar-brand {
+    color: #f8f9fa !important;
+  }
+  .dark-mode .card {
+    background-color: #2a2a2a;
+    color: #ffffff;
+  }
+  .dark-mode .btn-outline-primary {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+  }
+  .dark-mode .btn-outline-primary:hover {
+    background-color: #f8f9fa;
+    color: #121212;
+  }
+  .dark-mode .btn-outline-danger {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+  }
+  .dark-mode .btn-outline-danger:hover {
+    background-color: #f8f9fa;
+    color: #121212;
+  }
